@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h5>Register</h5>
+    <form class="container" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Sing Up</button>
+    </form>
+{% endblock %}
