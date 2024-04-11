@@ -27,7 +27,7 @@
 </div>
 {% endfor %}
 
-<form method="post" action="{% url 'comment' post_id.id %}">
+<form method="post" action="{% url 'comment' post_id.id %}"style="margin-bottom: 200px;">
   {% csrf_token %}
   <div class="mb-3" >
     <input
@@ -36,10 +36,10 @@
       id="exampleInputPassword1"
       placeholder="comment"
       name="text"
-      style="width: 30rem;"
     />
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  <a class="btn btn-primary" href="{% url 'home' %}" role="button">Cancel</a>
 </form>
 </div>
 {% endblock %}

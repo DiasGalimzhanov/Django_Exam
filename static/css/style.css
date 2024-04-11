@@ -1,0 +1,18 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(69, 92, 141);
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgb(69, 92, 141) !important;
+}

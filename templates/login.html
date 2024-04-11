@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h5>Login</h5>
-    <form class="container" method="post" enctype="multipart/form-data">
+<form class="container" method="post" enctype="multipart/form-data">
+        <h5>Login</h5>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Login</button>
+        <a class="btn btn-primary" href="{% url 'home' %}" role="button">Cancel</a>
     </form>
 {% endblock %}

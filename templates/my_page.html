@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" style="text-align: center;">
+    <img src="{{user.image.url}}" class="img-thumbnail" style="width: auto; height: 500px"/>
+    <h5>Login:  {{user.username}}</h5>
+    <p>Email: {{user.email}}</p>
+    <p>First name: {{user.first_name}}</p>
+    <p>Last name: {{user.last_name}}</p>
+    <a class="btn btn-primary" href="{% url 'update_user' user.id %}" role="button">Update</a>
+    <a class="btn btn-primary" href="{% url 'delete_user' user.id %}" role="button">Delete</a>
+</div>
+{% endblock %}

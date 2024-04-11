@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form method="post" class="container" enctype="multipart/form-data" style="align-items: center;">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Create</button>
+    <div class="container"  style="align-items: center;">
+        <div style="margin-left: auto; margin-right: auto;">
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a class="btn btn-primary" href="{% url 'home' %}" role="button">Cancel</a>
+        </div>
+    </div>
 </form>
 {% endblock %}
